@@ -1,6 +1,12 @@
-# Hello World
+# What is it about
 
-## Getting Started
+# Getting Started
+
+## Installation
+
+## Tech stack used
+
+## Running the dev server
 
 First, run the development server:
 
@@ -13,3 +19,5 @@ pnpm dev
 # or
 bun dev
 ```
+
+# Examples
