@@ -1,6 +1,7 @@
 // import type { Metadata } from "next";
 // import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
+import Layout from "@/components/ui/layout.tsx"
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -36,5 +37,9 @@ import "../globals.css";
 import type { AppProps } from 'next/app'
  
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  )
 }
