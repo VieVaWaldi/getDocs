@@ -13,7 +13,7 @@ import {
 
 export default function Navbar() {
     return (
-        <NavigationMenu>
+        <NavigationMenu className="w-full">
             <NavigationMenuList>
                 <NavigationMenuItem>
                 <a
