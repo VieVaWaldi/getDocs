@@ -9,33 +9,38 @@ import {
     NavigationMenuList,
     NavigationMenuTrigger,
     NavigationMenuViewport,
+    navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu"
+
+import Link from "next/link"
 
 export default function Navbar() {
     return (
         <NavigationMenu className="w-full">
-            <NavigationMenuList>
+            <div className="flex justify-start w-1/3">
+                <ul>
                 <NavigationMenuItem>
-                <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      Home
-                    </div>
-                  </a>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/login"
-                  >
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      Login
-                    </div>
-                  </a>
-                </NavigationMenuItem>
-            </NavigationMenuList>
+                        <Link href="/" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                Home
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+                </ul>
+
+            </div>
+            <div className="flex justify-end w-2/3">
+                <ul>
+                    <NavigationMenuItem>
+                        <Link href="/Login" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                Login
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+                </ul>
+
+            </div>
         </NavigationMenu>
     )
 }
